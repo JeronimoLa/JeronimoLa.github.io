@@ -1,6 +1,3 @@
-name: Deploy to GitHub Pages
-
-
 name: Deploy Docusaurus to GitHub Pages
 
 on:
