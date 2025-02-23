@@ -1,4 +1,4 @@
-name: Deploy Docusaurus to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,20 +6,24 @@ on:
       - 'README.md'
     branches:
       - main
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   build:
-    name: Build Docusaurus to gh-pages
+    name: Build Docusaurus
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Build website
         run: npm run build
 
