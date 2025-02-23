@@ -25,7 +25,6 @@ const config = {
   organizationName: 'JeronimoLa', // Usually your GitHub org/user name.
   projectName: 'JeronimoLa.github.io/', // Usually your repo name.
   trailingSlash: false,
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
